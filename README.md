@@ -1,7 +1,7 @@
 # Building the Documents Yourself
 
-* You will need https://github.com/evanbergeron/DND-5e-LaTeX-Template
-* You will need something that can build LaTeX documents
+* You will need https://github.com/evanbergeron/DND-5e-LaTeX-Template - Included temporarily in this repository until the no-bg option pull request is included in the original repository
+* You will need something that can build LaTeX documents with pdf latex
 
 # Dunmar Campaign Setting
 
