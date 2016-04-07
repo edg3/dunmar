@@ -1,0 +1,46 @@
+% item environment sty file
+
+%new itembox
+\newtcolorbox{itembox}[2][]{
+	enhanced,
+	frame hidden,
+	before skip=7pt plus2pt,
+	boxrule=0pt,
+	breakable,
+	boxsep=0.25ex,
+	toptitle=3mm,
+	left=2.5mm,
+	right=2.15mm,
+	arc=0mm,
+	borderline north={4pt}{0pt}{titlered},
+	borderline north={2.5pt}{0.75pt}{itemtandark},
+	borderline south={4pt}{0pt}{titlered},
+	borderline south={2.5pt}{0.75pt}{itemtandark},
+	colback=itemtan,
+	colbacktitle=itemtan,
+	colframe=titlered,
+	fonttitle=\scshape\bfseries\color{titlered}\Large,
+	fontupper=\fontfamily{lmss}\selectfont,
+	title=#2,
+	after={\vspace{7pt plus 1pt}\noindent},
+	#1
+}
+
+
+% Define Monster subsection header style
+%\newcommand{\monstersection}[1]{\subsubsection*{#1}}
+\newcommand{\itemsection}[1]{
+	{\par
+	\color{titlered}\normalfont\scshape\Large #1 \vspace{3pt}
+	\titleline{\color{titlered}\titlerule[0.6pt]}
+	\par\medskip}
+	}
+%\titlespacing*{\subsubsection}{0pt}{*0.5}{5pt}
+%\titleformat{\subsubsection}
+%{\color{titlered}\normalfont\scshape\Large}{\thesubsection}{1em}{}[{\color{titlered}\titlerule[0.5pt]\color{black}}]
+
+\newenvironment{itemaction}[1][\unskip]{\emph{\textbf{#1.}}}{\vspace{0.5em}}
+
+%
+% Macros for use within the item environment
+%
