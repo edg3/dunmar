@@ -25,6 +25,20 @@ This one-off is built in the Dunmar setting (see: Dunmar DM Guide) and is of hig
 There are two ways you can run this, a simple mode or an extensive mode. The extensive mode would require multiple levels of dungeon and a few days worth of adventuring (4 or more sessions of 3 hours) whereas the simple mode is geared towards a single session. Options marked "[Extend]" are additional place and happenings you can introduce.
 
 \subsection{Optional Rule: Insanity}
+Sanity is a hidden stat that each character begins with starting at 19. These are used for a number of things - most importantly when seeing something horrific you roll a sanity save. The higher your sanity the less detrimental the effects are. The DC to beat for a sanity check is 13, on a fail you lose 1 sanity, if your roll less than 20 less your current sanity (or 1) you then also roll for an insane action. \\
+
+You regain one sanity up to a max of 19 every short rest, but sanity can be used to do some other specific things, see below: \\
+
+\begin{dndtable}
+   	\textbf{Uses}  \\
+   	You can (if you don't have a spell slot available) cast a spell instead of using a slot by losing the appropriate spell-slot amount of sanity (e.g. casting a level 3 spell costs 3 sanity) instead of using a spell-slot. \\
+   	Some spells and items cost (or give) you sanity, be sure to reference their individual text.
+\end{dndtable}
+
+On a failed save where your roll is less than 20 less your current sanity roll for an action from the below table: \\
+
+\begin{dndtable}
+\end{dndtable}
 
 \section{Chapter 1: Introduction}
 \begin{quotebox}
@@ -52,17 +66,36 @@ TODO \\
 You come out into the open facing a solid stone wall that towers above you leading up to Upcrust. Another party just ahead of you gets lead up to the wall of stone and they walk into the wall as if through air and dissapear.
 
 \begin{quotebox}
-"Alright adventurers, you are next. We have no idea where you will end up in there, it is up to you guys to find the requested item and make your way out. Remember that if you are still there in 3 days you are likely to be sealed in there for the next 20 years!" the guard gestures forward towards the wall, handing you a rudimentary map, "You'll need this!"
+"Alright adventurers, you are next. We have no idea where you will end up in there, it is up to you guys to find the requested item and make your way out. Remember that if you are still there in 3 days you are likely to be sealed in there for the next 20 years!" the guard gestures forward towards the wall, handing you a rudimentary map, "You'll need this!" \\
+
+You pass through what seems like a rock face as if it is air and pop out a wall in a dimly lit corridor. You feel behind you and your hand is greeted by cold stone behind you. Looking around the light drops off very sharply around you giving you a very short distance you can see, you do note that it is likely magical - the same way you notice your hearing is dampened and everything is eerily quiet around you.
 \end{quotebox}
 
-The caverns can follow any layout, it is recommended you keep track for yourself with a number of other adventuring "parties" that are wanting to claim the same prize.
+The caverns can follow any layout, it is recommended you keep track for yourself in a twisting and turning dungeon with various intersections. \\
+
+Another important thing to note, the caverns were used by a deceased mage who was paranoid and did not keep all his works in one place and littered his caverns with tables, chairs
 
 \subsection{Traveling the Caverns}
-When a party moves around a corner roll from this table to decide what they see in the corridor. Roll from this table to discern what all they face, note that not everything is a combat encounter and you will need to handle this appropriately.
+When a party moves around a corner roll from this table to decide what they see in the corridor. Roll from this table to discern what all they face, note that not everything is a combat encounter and you will need to handle this appropriately. \\
+
+For the table below note that N refers to the number of players, see enemy sheets at end.
 
 \begin{dndtable}
-
+	\textbf{Roll} & \textbf{Find} \\
+	1-10 & Roll from the horrors table, feel free to make and describe your own. Horrors can also come with traps. \\
+	11 & N - 2 * Undead \\
+	12 & N - 2 * Mimic \\
+	13 & N - 2 * Outsider \\
+	14 & N + 2 * Swarm of Rats \\
+	15 & 1 * Abberation\\
+	16 & 1 * Ghoul \\
+	17 & Horrific Vision \\
+	18 & 3 * Undead Hounds \\
+	19 & Spirit \\
+	20 & 1 * Adventuring Party \\
 \end{dndtable}
+
+From the table above the Horros, Abberation, Ghoul, Undead Hounds and Spirits require a sanity check. \\
 
 This is just as much about mystery as it is about finding the object, and more so it is about the horror. \\
 
@@ -74,6 +107,317 @@ Describe things in horrific detail, the smells, the decay, the dark dinghy colou
 When something is pretty (a flower, a pedestal, an item) it should be eye catching, describe it to the players in all its beauty to contrast the darkness. On seeing something that isn't horrific you can give the players back a little bit of sanity.
 \end{commentbox}
 
-The goal of your players will be to retrieve the amulet, survive ambushes by other parties and get out alive and sane without permanent sanity problems
+The goal of your players will be to retrieve the amulet, survive ambushes by other parties and get out alive and sane without permanent sanity problems.
+
+\section{[Extend] Making the dungeon deeper}
+TODO \\
+
+\section{Appendix A: Enemy Cards}
+
+\subsection{Undead}
+
+\begin{quotebox}
+The undead are mangy creatures, quite similar to the idea of a zombie you would see in a movie or read of in a book. These are however extremely fast flesh eating monstrosities that fight in packs and work together to take down targets intelligently. They have no fear and will fight to the death.
+\end{quotebox}
+
+\begin{monsterbox}{Undead}
+	\textit{Medium undead, neutral evil}\\
+	\hline
+	\basics[%
+	armorclass = 14,
+	hitpoints  = 22 (3d8 + 9),
+	speed      = 30 ft
+	]
+	\hline
+	\stats[
+	STR = 13 (+1),
+	DEX = 6 (-2),
+	CON = 16 (+3),
+	INT = 13 (+2),
+	WIS = 6 (-2),
+	CHA = 5 (-3)
+	]
+	\hline
+	\details[%
+	% If you want to use commas in these sections, enclose the
+	% description in braces.
+	% I'm so sorry.
+	languages = {Understands common, can't speak},
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Undead Fortitude]
+		If damage would reduce undead to 0 or less hit points they can roll for DC of 5 + damage taken and on passing instead go to 1 HP.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Slam.]
+		Melee weapon attack: +6 to hit, reach 5ft., one target. \\
+		
+		On hit: (1d8+1) + 3 bludgeoning damage.
+	\end{monsteraction}
+\end{monsterbox}
+
+\subsection{Mimic}
+
+The mimics below follow from their description and form in the MM (though slightly abbreviated), and their behaviour is essentially the same. \\
+
+There is one addendum here, as a suggestion have the normal decorations in wherever the players are would instead be these hidden mimics, waiting for something to spring their trap like a venus fly trap. When one mimic attacks the others follow suit. \\
+
+\begin{monsterbox}{Mimic}
+	\textit{Medium undead, neutral evil}\\
+	\hline
+	\basics[%
+	armorclass = 12,
+	hitpoints  = 58 (9d8 + 18),
+	speed      = 15 ft
+	]
+	\hline
+	\stats[
+	STR = 17 (+3),
+	DEX = 12 (+1),
+	CON = 15 (+2),
+	INT = 5 (-3),
+	WIS = 13 (+1),
+	CHA = 8 (-1)
+	]
+	\hline
+	\details[%
+	% If you want to use commas in these sections, enclose the
+	% description in braces.
+	% I'm so sorry.
+	languages = {Understands common, can't speak},
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Shapechanger]
+		The mimc hides itself as normal items in the room. \\
+		
+		Some examples to help you out: table, chair, barrel, carpet, candle-stand, bench.
+	\end{monsteraction}
+	\begin{monsteraction}[Adhesive]
+		Anything that touches a mimic becomes stuck to it and will need to pass a DC 13 strength check to escape the grapple. \\
+		
+		Mimics have advantage against creatures they are grappling.
+	\end{monsteraction}
+	\begin{monsteraction}[Stirring]
+		When one mimic is awoken the others will attack too.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Pseudopod.]
+		Melee weapon attack: +5 to hit, reach 5ft. \\
+		
+		On hit: (1d8 + 3) bludgeoning damage and the target is grappled.
+	\end{monsteraction}
+\end{monsterbox}
+
+\subsection{Outsider}
+
+Outsiders are an adaption of Githyanki Warrior (pp160 MM). \\
+
+\begin{quotebox}
+These beings are born from nightmare, they were brought in by the experiments that took place here and now roam the halls freely. Their alien characteristics send shivers down the spines of those that lay eyes upon them and they have grown fond of the taste of flesh of all beings in our domain.
+\end{quotebox}
+
+\begin{monsterbox}{Outsider}
+	\textit{Medium undead humanoid, neutral evil}\\
+	\hline
+	\basics[%
+	armorclass = 17,
+	hitpoints  = 49 (9d8 + 9),
+	speed      = 30 ft
+	]
+	\hline
+	\stats[
+	STR = 15 (+2),
+	DEX = 14 (+2),
+	CON = 12 (+1),
+	INT = 13 (+1),
+	WIS = 13 (+1),
+	CHA = 10 (0)
+	]
+	\hline
+	\details[%
+	% If you want to use commas in these sections, enclose the
+	% description in braces.
+	% I'm so sorry.
+	languages = {Otherworldly},
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Mindwarp]
+		Outsiders on an attack cast a mind attack on their target causing sanity damage. Lowers the target's sanity by 1 if a sanity check fails.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Greatsword.]
+		Melee weapon attack: +5 to hit, reach 5ft. \\
+		
+		On hit: (2d6 + 6) slashing damage.
+	\end{monsteraction}
+\end{monsterbox}
+
+\subsection{Swarm of Rats}
+
+It is a swam of rats, what more do you want? \\
+
+\begin{monsterbox}{Swarm of Rats}
+	\textit{Medium undead humanoid, neutral evil}\\
+	\hline
+	\basics[%
+	armorclass = 10,
+	hitpoints  = 24 (7d8-7),
+	speed      = 30 ft
+	]
+	\hline
+	\stats[
+	STR = 9 (-1),
+	DEX = 11 (0),
+	CON = 9 (-1),
+	INT = 2 (-4),
+	WIS = 10 (0),
+	CHA = 3 (-4)
+	]
+	\hline
+	\details[%
+	% If you want to use commas in these sections, enclose the
+	% description in braces.
+	% I'm so sorry.
+	languages = {None},
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Swarm]
+		The swarm can occupy another creatures space and vice versa, the swarm can move through any opening large enough for a tiny rat. The swarm cannot regain hitpoints or gain temporary hitpoints.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bites.]
+		Melee weapon attack: +2 to hit, reach 5ft. \\
+		
+		On hit: (2d6) piercing damage, or (1d6) piercing damage if HP less than 12.
+	\end{monsteraction}
+\end{monsterbox}
+
+\subsection{Abberation}
+
+\begin{quotebox}
+This large beast towers over the tiny corridor, it looks like it is made of parts from many creatures but that where you would expect to see seams in its construction the form flows freely from one type to another. It has several tentacles around its body coming out at odd angles, some of which look like tongues.
+\end{quotebox}
+
+Abberations are based off the Chuul (pp40 MM). \\
+
+\begin{monsterbox}{Abberation}
+	\textit{Large abberation, neutral evil}\\
+	\hline
+	\basics[%
+	armorclass = 16,
+	hitpoints  = 93 (11d10 + 33),
+	speed      = 20 ft
+	]
+	\hline
+	\stats[
+	STR = 19 (+4),
+	DEX = 10 (0),
+	CON = 16 (+3),
+	INT = 5 (-3),
+	WIS = 11 (0),
+	CHA = 5 (-3)
+	]
+	\hline
+	\details[%
+	% If you want to use commas in these sections, enclose the
+	% description in braces.
+	% I'm so sorry.
+	languages = {None},
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Hatred for Magic]
+		The abberation hates all forms of magic and will focus the closest person that casts a spell around it.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Tentacles.]
+		Melee weapon attack: +6 to hit, reach 5ft. \\
+		
+		On hit: (2d6 + 4) bludgeoning damage.
+	\end{monsteraction}
+\end{monsterbox}
+
+\subsection{Ghoul}
+
+These ghouls are a slight adaption from the ghoul in the MM. \\
+
+\begin{monsterbox}{Ghoul}
+	\textit{Medium undead, neutral evil}\\
+	\hline
+	\basics[%
+	armorclass = 16,
+	hitpoints  = 45 (10d8),
+	speed      = 60 ft
+	]
+	\hline
+	\stats[
+	STR = 13 (+1),
+	DEX = 15 (+2),
+	CON = 10 (0),
+	INT = 7 (-2),
+	WIS = 10 (0),
+	CHA = 6 (-2)
+	]
+	\hline
+	\details[%
+	% If you want to use commas in these sections, enclose the
+	% description in braces.
+	% I'm so sorry.
+	languages = {None},
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Paralyzing Touch]
+		When physical contact is made with the ghoul players must pass a DC 10 Constitution saving throw or be paralyzed (save ends).
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Rush.]
+		Melee weapon attack: +6 to hit, reach 5ft. \\
+		
+		On hit: (2d6 + 4) bludgeoning damage.
+	\end{monsteraction}
+\end{monsterbox}
+
+\subsection{Undead Hound}
+
+\begin{quotebox}
+These hounds are barely flesh or bone, no doubt experiments gone wrong their skin has a constant appearance of moving around due to the bugs and worms swarming all over their black flesh.
+\end{quotebox}
+
+Undead hounds are based off of Dire Wolf (pp321 MM).
+
+\begin{monsterbox}{Undead Hound}
+	\textit{Medium undead, neutral evil}\\
+	\hline
+	\basics[%
+	armorclass = 14,
+	hitpoints  = 37 (5d10+10),
+	speed      = 50 ft
+	]
+	\hline
+	\stats[
+	STR = 17 (+3),
+	DEX = 15 (+2),
+	CON = 15 (+2),
+	INT = 3 (-4),
+	WIS = 12 (+1),
+	CHA = 7 (-2)
+	]
+	\hline
+	\details[%
+	% If you want to use commas in these sections, enclose the
+	% description in braces.
+	% I'm so sorry.
+	languages = {None},
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Pack Tactics]
+		The Hound has advantages on attacks if one of its allies are within 5 ft of their target and the ally is not incapacitated.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Rush.]
+		Melee weapon attack: +5 to hit, reach 5ft. \\
+		
+		On hit: (2d6 + 3) piercing damage, the target must succeed a DC 13 Strength saving throw or be knocked prone.
+	\end{monsteraction}
+\end{monsterbox}
 
 \end{document}
